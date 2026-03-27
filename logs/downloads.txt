@@ -1,0 +1,11 @@
+('127.0.0.1', 55775) -> ClientID:9102 Size:5242880 Time:2.89 Speed:1.73
+('127.0.0.1', 55778) -> ClientID:6914 Size:8388608 Time:1.07 Speed:7.50
+('127.0.0.1', 64313) -> ClientID:1761 Size:7340032 Time:2.26 Speed:3.09
+('127.0.0.1', 64316) -> ClientID:2196 Size:7340032 Time:1.71 Speed:4.09
+('10.1.17.69', 63276) -> ClientID:4553 Size:4194304 Time:1.95 Speed:2.06
+('127.0.0.1', 60716) -> ClientID:3263 Size:7340032 Time:1.93 Speed:3.63
+('192.168.1.59', 61237) -> ClientID:8608 Size:4194304 Time:1.72 Speed:2.33
+('10.1.21.139', 58462) -> ClientID:2941 Size:4194304 Time:1.25 Speed:3.19
+('127.0.0.1', 60185) -> ClientID:8583 Size:5242880 Time:2.66 Speed:1.88
+('192.168.1.59', 54705) -> ClientID:1513 Size:7340032 Time:2.32 Speed:3.02
+('192.168.1.59', 52529) -> ClientID:6666 Size:5242880 Time:2.23 Speed:2.24
