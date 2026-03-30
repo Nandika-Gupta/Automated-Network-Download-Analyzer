@@ -74,7 +74,7 @@ TLS is implemented using Python’s `ssl` module:
 
 ## ⚙️ How to Run
 
-### 1. Start Server
+### Start Server and Run Client
 ```bash
 python server.py
 python client.py
