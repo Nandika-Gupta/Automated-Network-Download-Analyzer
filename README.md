@@ -45,6 +45,11 @@ The system uses **TLS (SSL) encryption** for secure communication and **multithr
   - Maximum speed
   - Minimum speed
   - Total downloads
+- Metrics Measured:
+  - Download Speed
+  - Latency (Download Time)
+  - Throughput (Requests handled)
+  - Response Time
 - Logs client data
 - Measures response time
 
