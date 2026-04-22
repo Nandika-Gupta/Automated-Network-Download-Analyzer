@@ -37,7 +37,7 @@ This project aims to:
 
 ---
 
-## 🔐 Security Implementation
+##  Security Implementation
 - Uses Python `ssl` module for **TLS encryption**
 
 **Server:**
@@ -52,7 +52,7 @@ Ensures **encrypted communication over TCP**
 
 ---
 
-## ⚙️ Core Features
+##  Core Features
 - Low-level TCP socket programming (`AF_INET`, `SOCK_STREAM`)
 - Secure communication using TLS/SSL  
 - Multi-client handling using threading  
@@ -61,7 +61,7 @@ Ensures **encrypted communication over TCP**
 
 ---
 
-## 📊 Metrics Measured
+##  Metrics Measured
 - **Throughput (Mbps)** – data transfer rate  
 - **Latency** – time taken for download completion  
 - **Response Time** – server responsiveness  
@@ -73,7 +73,7 @@ Ensures **encrypted communication over TCP**
 
 ---
 
-## 📈 Performance Evaluation
+##  Performance Evaluation
 - Simulates **multiple concurrent clients**
 - Analyzes:
   - Network congestion patterns  
@@ -87,7 +87,7 @@ Outputs:
 
 ---
 
-## 🛠️ Technologies Used
+##  Technologies Used
 - Python  
 - TCP Socket Programming  
 - SSL/TLS (`ssl` module)  
