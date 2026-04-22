@@ -1,85 +1,113 @@
-# Automated Network Download Analyzer
+#  Automated Network Download Analyzer
 
-## Overview
-This project implements a secure client-server system using Python socket programming. Multiple clients simulate file downloads and send their statistics to a central server, which analyzes overall network performance.
+## 📌 Project Overview
+This project implements a **secure, automated client-server system** using low-level **TCP socket programming in Python**.
 
-The system uses **TLS (SSL) encryption** for secure communication and **multithreading** to handle multiple clients simultaneously.
+Multiple clients periodically download a file from a central server, measure network performance metrics, and send the results back for **analysis of congestion patterns over time**.
 
----
-
-## Features
-- Secure communication using TLS/SSL
-- Multi-client handling using threads
-- Calculates:
-  - Average speed
-  - Maximum speed
-  - Minimum speed
-  - Total downloads
-- Logs client data
-- Measures response time
+The system simulates **real-world network load conditions** and helps identify **performance variations and busiest network periods**.
 
 ---
 
-## Technologies Used
-- Python
-- TCP Socket Programming
-- SSL/TLS (`ssl` module)
-- Multithreading
+##  Problem Statement
+Network performance varies due to congestion, user load, and time-based usage patterns.
+
+This project aims to:
+- Automate periodic file downloads  
+- Measure performance metrics (speed, latency, throughput)  
+- Analyze trends to detect **network congestion patterns**
 
 ---
 
-# Automated Network Download Analyzer
+##  System Architecture
 
-## Overview
-This project implements a secure client-server system using Python socket programming. Multiple clients simulate file downloads and send their statistics to a central server, which analyzes overall network performance.
+### 🔹 Client
+- Periodically downloads a test file (scheduled execution)
+- Measures:
+  - Download speed  
+  - Latency (download time)  
+  - Response time  
+- Sends metrics securely to the server using TLS
 
-The system uses **TLS (SSL) encryption** for secure communication and **multithreading** to handle multiple clients simultaneously.
-
----
-
-## Features
-- Secure communication using TLS/SSL
-- Multi-client handling using threads
-- Calculates:
-  - Average speed
-  - Maximum speed
-  - Minimum speed
-  - Total downloads
-- Metrics Measured:
-  - Download Speed
-  - Latency (Download Time)
-  - Throughput (Requests handled)
-  - Response Time
-- Logs client data
-- Measures response time
+### 🔹 Server
+- Handles **multiple clients concurrently** using threading  
+- Receives and processes client data  
+- Logs and aggregates performance metrics  
+- Uses secure SSL/TLS communication  
 
 ---
 
-## Technologies Used
-- Python
-- TCP Socket Programming
-- SSL/TLS (`ssl` module)
-- Multithreading
+## 🔐 Security Implementation
+- Uses Python `ssl` module for **TLS encryption**
+
+**Server:**
+- Creates `SSLContext`
+- Loads certificate (`server.crt`) and key (`server.key`)
+- Wraps socket using `wrap_socket()`
+
+**Client:**
+- Establishes secure TLS connection with server  
+
+Ensures **encrypted communication over TCP**
 
 ---
 
-## Security Implementation
-
-TLS is implemented using Python’s `ssl` module:
-
-- Server:
-  - Uses `SSLContext` with certificate (`server.crt`) and key (`server.key`)
-  - Wraps socket using `wrap_socket()`
-
-- Client:
-  - Uses secure context to connect to server
-  - Ensures encrypted communication
+## ⚙️ Core Features
+- Low-level TCP socket programming (`AF_INET`, `SOCK_STREAM`)
+- Secure communication using TLS/SSL  
+- Multi-client handling using threading  
+- Automated periodic downloads  
+- Centralized performance analysis  
 
 ---
 
-## ⚙️ How to Run
+## 📊 Metrics Measured
+- **Throughput (Mbps)** – data transfer rate  
+- **Latency** – time taken for download completion  
+- **Response Time** – server responsiveness  
+- **Download Speed Statistics**:
+  - Average speed  
+  - Maximum speed  
+  - Minimum speed  
+- **Total downloads per client**
 
-### Start Server and Run Client
+---
+
+## 📈 Performance Evaluation
+- Simulates **multiple concurrent clients**
+- Analyzes:
+  - Network congestion patterns  
+  - Peak usage periods (busiest hour)  
+  - Performance variation over time  
+
+Outputs:
+- Logs  
+- Statistical summaries  
+- Graphs 
+
+---
+
+## 🛠️ Technologies Used
+- Python  
+- TCP Socket Programming  
+- SSL/TLS (`ssl` module)  
+- Multithreading  
+- JSON / Logging  
+
+---
+
+## How to Run
+
+### 1. Start Server
 ```bash
 python server.py
-python client.py
+```
+
+### 2. Run Client(s)
+```bash
+python analyser.py
+python report.py
+```
+--- 
+##  Conclusion
+This project demonstrates a secure, scalable, and automated network monitoring system that analyzes performance trends and detects congestion patterns effectively.
